@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.modules.data_sheet.income_tab.IncomeTabController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="incomeButton" layoutX="116.0" layoutY="211.0" mnemonicParsing="false" onAction="#incomeButtonClicked" text="Save" />
+            <TextField fx:id="amountTextField" layoutX="193.0" layoutY="71.0" onKeyReleased="#calculationDataEntered" promptText="amount" />
+            <ComboBox fx:id="incomeByComboBox" layoutX="62.0" layoutY="71.0" onAction="#incomeTypeDropdownChanged" promptText="Income By" />
+            <ComboBox fx:id="modeComboBox" layoutX="374.0" layoutY="71.0" promptText="Income Mode" />
+            <TextField fx:id="gstPrecentTextField" layoutX="62.0" layoutY="116.0" onAction="#calculationDataEntered" onKeyReleased="#calculationDataEntered" promptText="GST%" />
+            <TextArea fx:id="gstPrecentTextArea" editable="false" layoutX="232.0" layoutY="160.0" prefHeight="126.0" prefWidth="163.0" promptText="GST Calculations" wrapText="true" />
+            <TextField fx:id="finalAmountTextField" editable="false" layoutX="62.0" layoutY="156.0" promptText="final amount" />
+            <TextField fx:id="loanTakenFromTextField" disable="true" layoutX="232.0" layoutY="116.0" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
