@@ -23,8 +23,6 @@ public class ResetPasswordTabController {
   @FXML
   Button resetPasswordButton;
   @FXML
-  TextField currentPasswordTextField;
-  @FXML
   TextField newPasswordTextField;
   @FXML
   TextField confirmPasswordTextField;
@@ -89,13 +87,12 @@ public class ResetPasswordTabController {
             public void onChanged(Change<? extends Label> c) {
               String userId =
                   usersListTitledPaneListView.getSelectionModel().getSelectedItem().getId();
-              String usersTablePasswordSelectQuery = "Select " + HMConstants.HMUsers.HMUSERS_PASSWORD
-                  + " from " + HMConstants.HM_USERS_TABLE + " WHERE " + HMConstants.HMUsers.HMUSERS_ID
-                  + " = '" + userId + "';";
+              String usersTablePasswordSelectQuery = "Select "
+                  + HMConstants.HMUsers.HMUSERS_PASSWORD + " from " + HMConstants.HM_USERS_TABLE
+                  + " WHERE " + HMConstants.HMUsers.HMUSERS_ID + " = '" + userId + "';";
               try {
                 ResultSet rs = ServerObjectImpl.getInstance().getHsqlDBObject()
                     .getColumnDataResultSet(usersTablePasswordSelectQuery);
-                currentPasswordTextField.setText(rs.getString(1));
               } catch (Exception e) {
                 e.printStackTrace();
               }

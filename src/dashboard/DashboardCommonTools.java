@@ -63,7 +63,7 @@ public class DashboardCommonTools {
             + HMConstants.HMRights.HMRIGHT_RIGHT_DIRECTORY_KRY + "='" + userTabsSubTab + "';";
         String mainCategory = ServerObjectImpl.getInstance().getHsqlDBObject()
             .getColumnData(selectUserRightsQuery, 1);
-        if (mainCategory.equals(mainTabName)) {
+        if (mainCategory != null && mainCategory.equals(mainTabName)) {
           Tab newTab = new Tab(userTabsSubTab);
           selectUserRightsQuery = "select * from " + HMConstants.HM_RIGHTS_TABLE + " where "
               + HMConstants.HMRights.HMRIGHT_RIGHT_DIRECTORY_KRY + " = '" + userTabsSubTab + "';";

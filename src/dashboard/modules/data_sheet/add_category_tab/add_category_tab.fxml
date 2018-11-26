@@ -9,8 +9,8 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="addCategoryButton" layoutX="350.0" layoutY="151.0" mnemonicParsing="false" onAction="#addCategoryButtonOnClick" text="Add" />
-            <TextField fx:id="categoryTextField" layoutX="175.0" layoutY="151.0" promptText="category" />
+            <Button fx:id="addCategoryButton" layoutX="369.0" layoutY="123.0" mnemonicParsing="false" onAction="#addCategoryButtonOnClick" text="Add" />
+            <TextField fx:id="categoryTextField" layoutX="194.0" layoutY="123.0" promptText="category" />
          </children>
     </AnchorPane>
   </children>

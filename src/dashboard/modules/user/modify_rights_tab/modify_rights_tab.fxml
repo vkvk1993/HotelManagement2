@@ -10,7 +10,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <TitledPane fx:id="userListTitlesPane" animated="false" layoutX="14.0" layoutY="54.0" prefHeight="226.0" prefWidth="204.0" text="User List">
+            <TitledPane fx:id="userListTitlesPane" animated="false" layoutX="14.0" layoutY="20.0" prefHeight="264.0" prefWidth="204.0" text="User List">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
@@ -19,17 +19,17 @@
                   </AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="allowedUserModulesTitledPane" layoutX="232.0" layoutY="54.0" text="Allowed User Module">
+            <TitledPane fx:id="allowedUserModulesTitledPane" layoutX="232.0" layoutY="20.0" text="Allowed User Module">
                <content>
                   <VBox fx:id="allowedUserModulesVBox" />
                </content>
             </TitledPane>
-            <TitledPane fx:id="allowedDataSheetModulesTitledPane" layoutX="392.0" layoutY="54.0" text="Allowed Data Sheet Module">
+            <TitledPane fx:id="allowedDataSheetModulesTitledPane" layoutX="392.0" layoutY="20.0" text="Allowed Data Sheet Module">
                <content>
                   <VBox fx:id="allowedDataSheetModulesVBox" />
                </content>
             </TitledPane>
-            <Button fx:id="saveButton" layoutX="92.0" layoutY="18.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
+            <Button fx:id="saveButton" layoutX="96.0" layoutY="296.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
          </children>
     </AnchorPane>
   </children>

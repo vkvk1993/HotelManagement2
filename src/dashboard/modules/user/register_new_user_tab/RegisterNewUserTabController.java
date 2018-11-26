@@ -36,7 +36,7 @@ public class RegisterNewUserTabController {
   TitledPane allowedUserModulesTitlePane;
   @FXML
   TitledPane allowedDataSheetModulesTitlePane;
-  private String dataSheetCheckboxValues = "";
+  private String checkboxValues = "";
 
   @FXML
   public void initialize() {
@@ -61,9 +61,9 @@ public class RegisterNewUserTabController {
           public void handle(ActionEvent actionEvent) {
             CheckBox c = ((CheckBox) actionEvent.getSource());
             if (c.isSelected()) {
-              dataSheetCheckboxValues = dataSheetCheckboxValues + c.getId() + ",";
+              checkboxValues = checkboxValues + c.getId() + ",";
             } else {
-              dataSheetCheckboxValues = dataSheetCheckboxValues.replace(c.getId() + ",", "");
+              checkboxValues = checkboxValues.replace(c.getId() + ",", "");
             }
           }
         });
@@ -91,9 +91,9 @@ public class RegisterNewUserTabController {
           public void handle(ActionEvent actionEvent) {
             CheckBox c = ((CheckBox) actionEvent.getSource());
             if (c.isSelected()) {
-              dataSheetCheckboxValues = dataSheetCheckboxValues + c.getId() + ",";
+              checkboxValues = checkboxValues + c.getId() + ",";
             } else {
-              dataSheetCheckboxValues = dataSheetCheckboxValues.replace(c.getId() + ",", "");
+              checkboxValues = checkboxValues.replace(c.getId() + ",", "");
             }
           }
         });
@@ -142,7 +142,7 @@ public class RegisterNewUserTabController {
     String insertDataQuery = "insert into " + HMConstants.HM_USER_RIGHT_TABLE + " ("
         + HMConstants.HMUserRights.HMRIGHT_USER_ID + ", "
         + HMConstants.HMUserRights.HMRIGHT_USER_TAB_RIGHT_IDS + ") " + "values ('" + userId + "', '"
-        + dataSheetCheckboxValues + "');";
+        + checkboxValues + "');";
     ServerObjectImpl.getInstance().getHsqlDBObject().executeQuery(insertDataQuery);
   }
 }

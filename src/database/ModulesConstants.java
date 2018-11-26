@@ -14,13 +14,14 @@ public class ModulesConstants {
   public static final StrStr RESET_PASSWORD_TAB =
       new StrStr("Reset Password", "reset_password_tab");
 
-  public static final StrStr LOGOUT_TAB = new StrStr("Logout", "logout_tab");
+  public static final StrStr RESET_MY_PASSWORD_TAB =
+      new StrStr("Reset Your Password", "reset_my_password_tab");
 
   public static final StrStr[] HM_ADMIN_USER_TAB_RIGHTS_ARRAY = new StrStr[] {REGISTER_NEW_USER_TAB,
-      BLOCK_USER_TAB, MODIFY_RIGHTS_TAB, RESET_PASSWORD_TAB, LOGOUT_TAB};
+      BLOCK_USER_TAB, MODIFY_RIGHTS_TAB, RESET_PASSWORD_TAB, RESET_MY_PASSWORD_TAB};
 
   public static final StrStr[] HM_NORMAL_USER_TAB_RIGHTS_ARRAY =
-      new StrStr[] {RESET_PASSWORD_TAB, LOGOUT_TAB};
+      new StrStr[] {RESET_MY_PASSWORD_TAB};
 
 
 

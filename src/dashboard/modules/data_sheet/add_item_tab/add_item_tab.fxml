@@ -11,8 +11,8 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="addItemButton" layoutX="320.0" layoutY="160.0" mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
-            <TitledPane fx:id="categoryListTitlesPane" animated="false" layoutX="33.0" layoutY="47.0" prefHeight="226.0" prefWidth="204.0" text="Category List">
+            <Button fx:id="addItemButton" layoutX="369.0" layoutY="160.0" mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
+            <TitledPane fx:id="categoryListTitlesPane" animated="false" layoutX="61.0" layoutY="20.0" prefHeight="295.0" prefWidth="204.0" text="Category List">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
@@ -21,7 +21,7 @@
                   </AnchorPane>
                </content>
             </TitledPane>
-            <TextField fx:id="itemNameTextField" layoutX="279.0" layoutY="108.0" promptText="item" />
+            <TextField fx:id="itemNameTextField" layoutX="328.0" layoutY="108.0" promptText="item" />
          </children>
     </AnchorPane>
   </children>

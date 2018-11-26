@@ -1,0 +1,11 @@
+SELECT hUserId,item,expenseType,expenseMode,category,e.sumExpenseAmount,e.expenseDate,quantity,quantityUnit,salaryCreditedTo, 
+iUserId,incomeType,gstPrecentage,i.sumIncomeAmount,incomeMode,loanTakenFrom,i.incomeDate,enteredAmount,interestPrecent,commission
+FROM (SELECT userId as iUserId,incometype,gstPrecentage, SUM(incomeAmount) sumIncomeAmount,incomeMode,loanTakenFrom, incomeDate,enteredAmount,interestPrecent,commission FROM HMINCOME
+GROUP BY incomeDate,userId,incomeType,gstPrecentage,incomeMode,loanTakenFrom,enteredAmount,interestPrecent,commission) i
+FULL JOIN 
+(SELECT userId as hUserid,item,expenseType,expenseMode,category,SUM(expenseAmount) sumExpenseAmount,expenseDate,quantity,quantityUnit,salaryCreditedTo FROM HMEXPENSE
+GROUP BY expenseDate,userId,item,expenseType,expenseMode,category,quantity,quantityUnit,salaryCreditedTo) e
+ON i.incomeDate = e.expenseDate
+WHERE (expenseDate >= '2016-11-26' AND expenseDate <= '2018-11-26' OR expenseDate = null) OR (incomeDate <= '2018-11-26' AND incomeDate >= '2016-11-01' or incomeDate = null)
+
+SELECT DISTINCT * FROM HMEXPENSE FULL JOIN HMINCOME ON incomeDate = expenseDate WHERE (expenseDate <= '2018-11-26' AND expenseDate >= '2016-11-01') OR (incomeDate <= '2018-11-26' AND incomeDate >= '2016-11-01') ORDER BY expenseDate ASC, incomeDate ASC

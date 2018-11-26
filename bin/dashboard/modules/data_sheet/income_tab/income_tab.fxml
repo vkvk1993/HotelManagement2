@@ -11,14 +11,16 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="incomeButton" layoutX="116.0" layoutY="211.0" mnemonicParsing="false" onAction="#incomeButtonClicked" text="Save" />
-            <TextField fx:id="amountTextField" layoutX="193.0" layoutY="71.0" onKeyReleased="#calculationDataEntered" promptText="amount" />
-            <ComboBox fx:id="incomeByComboBox" layoutX="62.0" layoutY="71.0" onAction="#incomeTypeDropdownChanged" promptText="Income By" />
-            <ComboBox fx:id="modeComboBox" layoutX="374.0" layoutY="71.0" promptText="Income Mode" />
-            <TextField fx:id="gstPrecentTextField" layoutX="62.0" layoutY="116.0" onAction="#calculationDataEntered" onKeyReleased="#calculationDataEntered" promptText="GST%" />
-            <TextArea fx:id="gstPrecentTextArea" editable="false" layoutX="232.0" layoutY="160.0" prefHeight="126.0" prefWidth="163.0" promptText="GST Calculations" wrapText="true" />
-            <TextField fx:id="finalAmountTextField" editable="false" layoutX="62.0" layoutY="156.0" promptText="final amount" />
-            <TextField fx:id="loanTakenFromTextField" disable="true" layoutX="232.0" layoutY="116.0" />
+            <Button fx:id="incomeButton" layoutX="116.0" layoutY="188.0" mnemonicParsing="false" onAction="#incomeButtonClicked" text="Save" />
+            <TextField fx:id="amountTextField" layoutX="220.0" layoutY="36.0" onKeyReleased="#calculationDataEntered" promptText="amount" />
+            <ComboBox fx:id="incomeByComboBox" layoutX="108.0" layoutY="36.0" onAction="#incomeTypeDropdownChanged" promptText="Income By" />
+            <ComboBox fx:id="modeComboBox" layoutX="386.0" layoutY="36.0" promptText="Income Mode" />
+            <TextField fx:id="gstPrecentTextField" layoutX="62.0" layoutY="81.0" onAction="#calculationDataEntered" onKeyReleased="#calculationDataEntered" promptText="GST%" />
+            <TextArea fx:id="gstPrecentTextArea" editable="false" layoutX="220.0" layoutY="165.0" prefHeight="126.0" prefWidth="317.0" promptText="GST Calculations" wrapText="true" />
+            <TextField fx:id="finalAmountTextField" editable="false" layoutX="62.0" layoutY="121.0" promptText="final amount" />
+            <TextField fx:id="loanTakenFromTextField" disable="true" layoutX="386.0" layoutY="81.0" promptText="loan taken from" />
+            <TextField fx:id="interestPrecentTextField" layoutX="220.0" layoutY="81.0" onAction="#calculationDataEntered" onKeyReleased="#calculationDataEntered" promptText="interest%" />
+            <TextField fx:id="commissionTextField" layoutX="220.0" layoutY="121.0" promptText="commission" />
          </children>
     </AnchorPane>
   </children>

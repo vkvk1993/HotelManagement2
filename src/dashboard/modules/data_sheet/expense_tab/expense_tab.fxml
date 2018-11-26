@@ -10,12 +10,15 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="expenseSaveButton" layoutX="430.0" layoutY="122.0" mnemonicParsing="false" onAction="#expenseSaveButtonClicked" text="Expense" />
-            <ComboBox fx:id="paymentModeComboBox" layoutX="380.0" layoutY="65.0" promptText="Expense Mode" />
-            <ComboBox fx:id="expenseTypeComboBox" layoutX="66.0" layoutY="65.0" onAction="#expenseTypeDropdownChanged" promptText="Expense type" />
-            <TextField fx:id="expenseAmountTextField" layoutX="208.0" layoutY="65.0" promptText="amount" />
-            <ComboBox fx:id="categoryComboBox" disable="true" layoutX="152.0" layoutY="122.0" promptText="Category" />
-            <ComboBox fx:id="itemComboBox" disable="true" layoutX="283.0" layoutY="122.0" promptText="Item" />
+            <Button fx:id="expenseSaveButton" layoutX="333.0" layoutY="175.0" mnemonicParsing="false" onAction="#expenseSaveButtonClicked" text="Save" />
+            <ComboBox fx:id="paymentModeComboBox" layoutX="421.0" layoutY="34.0" promptText="Expense Mode" />
+            <ComboBox fx:id="expenseTypeComboBox" layoutX="110.0" layoutY="34.0" onAction="#expenseTypeDropdownChanged" promptText="Expense type" />
+            <TextField fx:id="expenseAmountTextField" layoutX="249.0" layoutY="34.0" promptText="amount" />
+            <ComboBox fx:id="categoryComboBox" disable="true" layoutX="105.0" layoutY="119.0" onAction="#categoryComboBoxonChange" promptText="Category" />
+            <ComboBox fx:id="itemComboBox" disable="true" layoutX="249.0" layoutY="119.0" prefHeight="25.0" prefWidth="251.0" promptText="Item" />
+            <ComboBox fx:id="quantityUnitComboBox" disable="true" layoutX="424.0" layoutY="77.0" promptText="Units" />
+            <TextField fx:id="quantityTextField" disable="true" layoutX="248.0" layoutY="77.0" promptText="Quantity" />
+            <TextField fx:id="salaryToTextField" disable="true" layoutX="84.0" layoutY="77.0" promptText="salary credited to" />
          </children>
     </AnchorPane>
   </children>

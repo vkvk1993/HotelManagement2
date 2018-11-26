@@ -5,5 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/hsqldb.jar"/>
 	<classpathentry kind="lib" path="lib/charm-glisten-4.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

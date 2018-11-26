@@ -1,0 +1,43 @@
+java -classpath lib/hsqldb.jar org.hsqldb.server.Server --database.0 file:hsqldb/demodb --dbname.0 testdb
+
+
+
+login->register,block  user, reset user passwrd, reset ur passwrd, logout, modify user rights,
+
+user-> reset ur pass, logout
+admin -> register,block  user, reset user passwrd, reset ur passwrd, logout, modify user rights,
+
+balance sheet->add ctegory, add items, income, expense, report --------------- save loggedInUsers name who does the operation
+addCatiegry-> sing input (ategory name). save
+addItem -> select category-> input text box to add item name.save
+income-> dropdown- income by rooms
+					restaurnet
+					loan
+		amount text field
+		drop dowwn-cash
+					bank
+		text field - GST% -> update amount text field(amount - (gst on aamount))
+		(loan)->loan taken from
+expense -> (dropdownn )-salary expens
+						purchase Entry - category dropdown-
+										item dropdown-
+						
+						
+			textfield-amount
+			dropdown- cash/bank
+report -> monthy
+		  daily
+		  direct
+			
+		
+
+ALTER TABLE ba_student_detail_sem_1 ADD ncc_nss_category varchar(10) DEFAULT 'A';
+ALTER TABLE ba_student_detail_sem_1 ADD ncc_nss_grace_alloc int(11) DEFAULT 0;
+ALTER TABLE ba_student_detail_sem_1 ADD ncc_nss_grace_remain int(11) DEFAULT 0;
+
+
+
+
+ALTER TABLE ba_student_detail_sem_1 DROP `ncc_nss_category`;
+ALTER TABLE ba_student_detail_sem_1 DROP `ncc_nss_grace_alloc`;
+ALTER TABLE ba_student_detail_sem_1 DROP `ncc_nss_grace_remain`;
